@@ -1,0 +1,408 @@
+﻿body {
+    background-color: #F5F5F5;
+    font-family: 'David', Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+    direction: rtl;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 1px 1px #333;
+    letter-spacing: 2px;
+    color: #a0baaa; /* or any color of your choice */
+    text-align: center;
+    font-family: 'David', Arial, sans-serif;
+}
+
+header {
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid black;
+    background-color: #EDEDED;
+    padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  padding: 5px 18px;
+  margin: 0 5px;
+  border-radius: 5px;
+  
+}
+
+nav a:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+nav a.active {
+  background-color: #333333;
+  color: #FFFFFF;
+  font-weight: bold;
+  
+}
+
+main {
+  padding: 20px;
+}
+/* set the opacity to 0 to hide the element */
+.intro {
+  opacity: 0;
+}
+
+/* set the transition to gradually increase the opacity over 1 second */
+.intro {
+  transition: opacity 1s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* set the opacity to 1 to show the element */
+.intro.show {
+  opacity: 1;
+}
+.avatar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-out;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar.small {
+    width: 60px;
+    height: 60px;
+    top: 55px;
+    opacity: 0.7;
+}
+
+.Profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.center_right2 {
+    margin-right: 0px;
+}
+
+
+.section-divider {
+  height: 3px;
+  margin: 30px 0;
+  background-color: #333;
+  border: none;
+}
+ .book-section {
+      margin: 50px 0;
+    }
+    .book-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .book {
+      display: inline-block;
+      margin: 0 10px 20px;
+      position: relative;
+    }
+    .book img {
+      width: 160px;
+      transition: all 0.3s ease-in-out;
+    }
+   .book:hover img {
+      width: 200px;
+    }
+
+
+.book-list {
+    display: table-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+}
+
+    .book-list li {
+        width: 23%; /* Adjust the width as needed to fit 4 books in one line */
+        margin-bottom: 20px;
+    }
+
+    .book-list img {
+        width: 20px;
+        height: auto;
+    }
+
+        .book-list li img:hover {
+            transform: scale(1.1);
+        }
+
+.tooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.book:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.book-title {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    background-color: #F5F5F5;
+    color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  font-weight: bold;
+  margin-right: 1rem;
+  flex: 1;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 2;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+
+/* set the transition to gradually increase the opacity and move the element down over 1 second */
+.section {
+    font-size:20px;
+    line-height:1.5;
+    margin: 0 auto;
+    width: 76%;
+    padding: 40px;
+    margin-top: -20px;
+    opacity: 0.2;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+    .section ol {
+        margin: 0;
+        padding: 0;
+        counter-reset: item;
+    }
+
+    .section li {
+        counter-increment: item;
+        margin-bottom: 1rem;
+        list-style-type: none;
+        display: block;
+    }
+        .section li:before {
+            content: counter(item) ".";
+            font-weight: bold;
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        .section li[dir="ltr"] {
+            justify-content: flex-end;
+        }
+
+    .section b {
+        font-size: 2rem;
+        text-shadow: 1px 1px #333;
+        letter-spacing: 2px;
+        color: #a0baaa; /* or any color of your choice */
+        text-align: center;
+        font-family: 'David', Arial, sans-serif;
+    }
+
+    .section a {
+        color: #0936ff;
+        text-decoration: none;
+    }
+
+        .section a:hover {
+            color: #000;
+            text-decoration: underline;
+            transform: translateY(-4px);
+        }
+
+    .section .red {
+        color: red;
+    }
+
+
+/* set the opacity to 1 and move the element down to its original position */
+    .section.show {
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+.students-list {
+    list-style-type: none;
+    font-size:20px;
+    padding: 0;
+}
+
+    .students-list li {
+        
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px; /* Adjust the height as needed */
+    background-color: #a0baaa; /* Adjust the color as needed */
+    z-index: 9999;
+    transition: width 0.1s ease-in-out;
+}
+
+.wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    background-color: #F5F5F5;
+    padding: 2px;
+}
+    .wrapper.scrolled {
+        position: sticky;
+        top: 30px;
+        transform: translateY(-10%);
+        opacity: 0.9;
+        height: 70%;
+        height: 60px;
+    }
+.center_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 87%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.active {
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline;
+    transform: translateY(-4px);
+}
+.custom-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 50px;
+}
+
+        .custom-list li:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #333;
+        }
+
+    .custom-list li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 0.4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        background-color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        min-width:250px; /* Adjust the value as needed */
+    }
+
+            .custom-list li a:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .custom-list li a[target="_blank"]::after {
+                content: ">";
+                font-size: 12px;
+                margin-left: 5px;
+                color: #999;
+            }
+
+        .custom-list li br {
+            display: none;
+        }
+
+        .custom-list li:last-of-type {
+            margin-bottom: 0;
+        }
+

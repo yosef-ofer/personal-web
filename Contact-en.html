@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7DPZ4XX65"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M7DPZ4XX65');
+</script>
+  <meta charset="UTF-8">
+  <title>Prof. Yosef Ofer</title>
+  <link rel="stylesheet" href="style-en.css">
+</head>
+<body>
+  <header>
+    <div class="avatar">
+      <img src="yosef-ofer.jpg" alt="Profile Image">
+    </div>
+    <h1>Contact me</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="Books-en.html">Books</a>
+    <a href="Publications-en.html">Publications</a>
+    <a href="Videos-en.html">Videos</a>
+    <a href="index.html">עברית</a>
+    <a href="Contact-en.html" class="active">Contact</a>
+  </nav>
+  <main>
+    <div class="center_content">
+      <h2>Contact Prof Yosef Ofer</h2>
+      <p>Department of Bible Studies, Bar-Ilan University</p>
+      <p>Phone: +972523463202</p>
+      <p>Email: Yosef.Ofer@biu.ac.il</p>
+      
+      <div class="contact-form">
+        <h2><center>Contact Form</h2>
+        <form action="send-mail.php" method="POST">
+          <div class="form-row">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>    <script src="Script.js"></script>
+    <p>&copy; 2023 Prof. Yosef Ofer</p>
+  </footer>
+
+</body>
+</html>

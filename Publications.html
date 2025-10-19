@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7DPZ4XX65"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M7DPZ4XX65');
+    </script>
+    
+    <meta charset="UTF-8">
+    <title>פרסומים - פרופ' יוסף עופר</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateActiveClass() {
+            const sections = document.querySelectorAll('.section b[id]');
+            const scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+
+            sections.forEach((section) => {
+                if ((section.offsetTop - 100) <= scrollPos) {
+                    document.querySelectorAll('.custom-list li').forEach((el) => {
+                        el.classList.remove('active');
+                        if (el.querySelector('a').getAttribute('href').slice(1) == section.id) {
+                            el.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+        window.addEventListener('scroll', function () {
+
+            updateActiveClass();
+
+            const progressBar = document.querySelector('.progress-bar');
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = progress + '%';
+
+            const section = document.querySelector('.section');
+            const sectionPosition = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (sectionPosition < screenPosition) {
+                section.classList.add('show');
+            }
+        });
+        var offset = -65;
+        function scrollToSection(event) {
+            event.preventDefault();
+            var targetId = event.target.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+            var targetPosition = targetElement.getBoundingClientRect().top;
+            var startPosition = window.pageYOffset;
+            var distance = targetPosition + startPosition + offset;
+
+            window.scrollTo({
+                top: distance,
+                behavior: "smooth"
+            });
+            updateActiveClass();
+        }
+        window.addEventListener("load", updateActiveClass);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="avatar">
+            <img src="yosef-ofer.jpg" alt="Profile Image">
+        </div>
+        <h1>פרסומים - פרופ' יוסף עופר</h1>
+    </header>
+    <div class="progress-bar"></div>
+
+    <nav>
+        <a href="index.html">בית</a>
+        <a href="Books.html">ספרים</a>
+        <a href="Publications.html" class="active">פרסומים</a>
+        <a href="Students.html">סטודנטים</a>
+        <a href="Videos.html">וידיאו</a>
+        <a href="home.html">English</a>
+        <a href="Contact.html">צור קשר</a>
+    </nav>
+    <main>
+        <div class="center_content">
+            <div class="wrapper">
+                <div class="custom-list-content">
+                    <ul class="custom-list">
+                        <li id="item1"><a href="#a1" onclick="scrollToSection(event)"> מחקרים בענייני המסורה </a></li>
+                        <li id="item2"><a href="#a2" onclick="scrollToSection(event)"> מחקרים בנושא פרשני המקרא </a></li>
+                        <li id="item3"><a href="#a3" onclick="scrollToSection(event)"> מחקרים בענייני העברית החדשה </a></li>
+                        <li id="item4"><a href="#a4" onclick="scrollToSection(event)"> מחקרים בנושא קריאת התורה וההפטרות </a></li>
+                        <li id="item5"><a href="#a5" onclick="scrollToSection(event)"> מאמרים תורניים (תנ"ך והלכה) </a></li>
+                        <li id="item6"><a href="#a6" onclick="scrollToSection(event)"> עריכת ספרים וכתבי עת </a></li>
+                        <li id="item7"><a href="#a7" onclick="scrollToSection(event)"> הערות ומאמרי ביקורת </a></li>
+                        <li id="item8"><a href="#a8" onclick="scrollToSection(event)"> ערכים אינציקלופדיים </a></li>
+                        <li id="item9"><a href="#a9" onclick="scrollToSection(event)"> התקבלו לפרסום </a></li>
+                        <li id="item10"><a href="#a10" onclick="scrollToSection(event)"> מאמרים פופולריים </a></li>
+                        <li id="item11"><a href="#a11"> רשימות זיכרון </a></li>
+                        <li><a href="http://research.biu.ac.il/researcher/OferYosef" target="_blank">מאמרים באתר המחלקה לתנ"ך בר אילן</a></li>
+                        <li><a href="http://aleph.nli.org.il/F/?func=find-c&con_lng=heb&local_base=rmb01&ccl_term=AUT%3D%D7%A2%D7%A4%D7%A8+%D7%99%D7%95%D7%A1%D7%A3&adjacent=N" target="_blank"> רשימת מאמרים באתר רמב"י </a></li>
+                        <li><a href="https://scholar.google.co.il/citations?user=I0xj4g8AAAAJ&hl=iw" target="_blank"> Google Scholar </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <ol type="1" start="1">
+                    <b id="a1"> א. מחקרים בענייני המסורה</b></br>
+                    </br>
+                    <li>	'מענייני המסורה - סימון הפרשיות', מגדים ב, מרחשוון תשמ"ז, עמ' 104-91. <a href="papers/Ofer - Simun.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'שני עניינות במסורה', מחקרים בלשון ב-ג, ירושלים תשמ"ז, עמ' 386-377. <a href="papers/two masorah.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'פרשיות "ספר התמיד" מברצלונה', מגדים ד, תשרי תשמ"ח, עמ' 74-67. <a href="papers/Ofer-SeferHaTamid.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'כתר ארם צובה לאור רשימותיו של מ"ד קאסוטו', ספונות ס"ח ד (יט), תשמ"ט, עמ' 344-277. <a href="papers/The Aleppo Codex.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>
+                        'סדרי נביאים וכתובים', תרביץ נח (תשמ"ט), עמ' 189-155. <a href="papers/sidre_neviim.pdf" target="_blank"> (PDF) </a><br />[חלקו השני של המאמר נכלל גם בתוך: ליקוטי תרביץ ו: מקראה בחקר התפילה, ליקט והוסיף מבוא: חננאל מאק, ירושלים תשס"ג, עמ' 185-149].</br>
+                        <a class="red" href="papers/haftarot3.pdf" target="_blank">קובץ מעודכן של ההפטרות במחזור התלת-שנתי.</a>
+                        <br />
+                        <a class="red" href="papers/Haftarot_Ofer2023.xlsx" target="_blank"> טבלה מפורטת - מעודכנת כסליו תש"ף</a>
+                        </br></br>
+                    <li>	'קטע מספר שמות - מהחלק החסר בכתר ארם צובה', פעמים 41 (סתיו תש"ן), עמ' 41-48. <a href="papers/fragment.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>'כתר ארם צובה והתנ"ך של ר' שלום שכנא ילין', ספר היובל לרב מרדכי ברויאר, ירושלים תשנ"ב, עמ' 353-295. <a href="papers/Jubilee Rabbi Mordechai Breuer.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'דרכו של מסרן - על מסורתו של אהרן בן אשר בכתר ארם צובה', מחקרים בלשון ה-ו - ספר היובל לישראל ייבין, ירושלים תשנ"ב, עמ' 500-481. <a href="papers/Ofer - Ben Asher.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'שווא בסוף המילה בניקוד הטברני', לשוננו נז (תשנ"ג), עמ' 118-109. <a href="papers/sva bsof amila bnekod atvaruany.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'המסורה הבבלית לתורה, עקרונותיה ודרכיה', חיבור לשם קבלת התואר דוקטור לפילוסופיה, הוגש לסנט האוניברסיטה העברית בירושלים, אב תשנ"ה; חלק א: 243 עמ', חלק ב: קצו עמ'; תקציר באנגלית: XV עמ'. </li>
+                    </br>
+                    <li dir="ltr">	'Vocalization Signs in Cairo Genizah Manuscripts of the Damascus Covenant', Appendix to the introduction to the Damascus Document ,in: J. H. Charlesworth (ed.), The Dead Sea Scrolls - Hebrew, Aramaic, and Greek Texts with English Tanslations, vol. 2, Tubingen 1995, pp.10-11  </li>
+                    </br>
+                    <li dir="ltr">	Masoretic List of Babylonian Origin of Dotted Words in the' Pentateuch', in: E.J. Revell (ed.), Proceedings of the Twelfth International Congress of the International Organization for Masoretic Studies - Masoretic Studies 8, 1996, pp.71-85  <a href="papers/En-papers/ofer-dotted_words.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'מגבשי המסורה השונים ויחסם לדקדוק', בתוך: מ' בר-אשר (עורך), פרקים בעברית לתקופותיה - אסופת זיכרון לשושנה בהט, ירושלים תשנ"ז, עמ' 69-51. <a href="papers/migbeshe masora.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'עיבוד מסרני של ערכים ממחברת מנחם בידי שמואל בן יעקב', לשוננו סב (תשנ"ט), עמ' 255-189.  <a href="papers/Ofer-Menachem.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'הערות מסורה בענייני דקדוק בכתב-יד לנינגרד עם תרגום רס"ג (לס)', בתוך: א' ממן (עורך), מחקרים בלשון  ח - ספר זיכרון לדוד טנא, ירושלים תשס"א, עמ' 75-49. <a href="papers/Masora Leningrad - Ofer.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	' "הן האדם היה כאחד ממנו לדעת טוב ורע" - פרשנות ומסורות קריאה בטבריה ובבבל', בתוך: א' בזק (עורך), על דרך האבות - קובץ מאמרים בנושאי תורה וחינוך, אלון שבות תשס"א, עמ' 431-419. <a href="papers/Hen.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	המסורה הבבלית לתורה, עקרונותיה ודרכיה, האקדמיה ללשון העברית והוצאת ספרים ע"ש י"ל מאגנס, ירושלים תשס"א, 604 עמ'. </li>
+                    </br>
+                    <li>	"כתר ארם צובה - תולדות כתב-היד וסמכותו"; "המהדורה הנוכחית ועקרונות הנוסח שלה", בתוך: מ' גלצר (עורך), כתר ירושלים - תנ"ך האוניברסיטה העברית: הארות לנוסח ולמלאכת הספר, ירושלים תשס"א, עמ'  *-17*40; <a href="papers/aleppo codex hebrew.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	"הגהת נוסח המקרא במהדורת 'כתר ירושלים' ", לשוננו סד (תשס"ב), עמ' 206-181. <a href="papers/Ofer - Keter Yerushalayim.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li dir="ltr">	"The Preparation of the Jerusalem Crown Edition of the Bible Text", Hebrew Studies XLIV (2003), pp. 87-117 </li>
+                    </br>
+                    <li dir="ltr">	"A Masoretic Note in the Aleppo Codex Concerning the Composite Words", Textus XXI (2002), pp. 209-233.  <a href="papers/A Masoretic Note in the Aleppo Codex Concerning the Composite Words.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	'עוד מילים זעירות במשמעות לא רגילה', מגדים לז (אדר א תשס"ג), עמ' 102-97; 'עוד על המילים הזעירות: תגובה לדברי אסף מאלי', מגדים מא (טבת תשס"ה), עמ' 112-110. <a href="papers/Ofer-TinyWords.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'חילופי ו-י במקרא והשתקפותם בהערות המסורה', מחקרי מורשתנו ב-ג, ספר זיכרון לד"ר צבי בצר, תשס"ד, עמ' 69-84. <a href="papers/vav_yod.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	"הפרדת הניקוד הטברני מטעמי המקרא", לשוננו סו (תשס"ד), עמ' 313-297. <a href="papers/Ofer-Separation.pdf" target="_blank"> (PDF) </a> </li>
+                    </br>
+                    <li>	'קונטרסי המסורה של כתר ארם צובה - על פי העתק בארכיונו של יצחק זליגמן בר', עיוני מקרא ופרשנות ז: מנחות ידידות והוקרה למנחם כהן, רמת-גן תשס"ה, עמ' 162-137. <a href="papers/zeligman.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'ה' השאלה ברשימות המסורה המצרפת', מחקרים בלשון י (תשס"ו), עמ' 157-139. <a href="papers/The question lists devoted joins.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	 [עם יואל אליצור:] 'ההיכל והספר: רשמי סיור ב"היכל הספר" לאחר פתיחתו מחדש', על אתר יג-יד (אלול תשס"ו), עמ' 220-201. <a href="papers/Elitzur-Ofer-Shrine-of-the-Book.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li dir="ltr">	"Abraham Firkovich and the Dedication Inscription of the Aleppo Codex", HUCA 76 (2005), pp. 259-272  </li>
+                    </br>
+                    <li>	"משה דוד קאסוטו, כתר ארם צובה ומהדורת התנ"ך הראשונה של האוניברסיטה העברית", בתוך: ראובן בונפיל (עורך), משה דוד קאסוטו (איטליה: כינוסים, סדרת מוספים 3), ירושלים תשס"ז, עמ' לא-מה.<a href="papers/bible edition of cassuto.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li dir="ltr">	"Methods of Encoding in Samuel de Archevolti’s Arugat Ha-Bosem", European Journal of Jewish Studies 2.1 (2008), pp. 45-63</li>
+                    </br>
+                    <li>	"כתיב וקרי: פשר התופעה, דרכי הסימון שלה ודעות הקדמונים עליה" (חלקים א-ב), לשוננו ע (תשס"ח), עמ' 73-55. <a href="papers/ktiv kri - part a.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	"כתיב וקרי: פשר התופעה, דרכי הסימון שלה ודעות הקדמונים עליה" (חלקים ג-ד), לשוננו עא (תשס"ט), עמ' 279-255. <a href="papers/ktiv kri - part c.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	"סימני זיכרון במסורה של כתר ארם צובה", מגדים נ, תמוז תשס"ט, עמ' 198-171.<a href="papers/sign remember - megadim.pdf" target="_blank">(PDF)</a>  </li>
+                    </br>
+                    <li dir="ltr">	"Methods and Sources of Yedidya Shelomo Norzi in his Treatise Minhat Shay", Textus 24 (2009), pp. 287-312 <a href="papers/En-papers/Norzi.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	"רשימה בבלית של פרשיות פתוחות וסתומות בתורה", בתוך: מ' בר-אשר וח"א כהן (עורכים), משאת אהרן: מחקרים בלשון מוגשים לאהרן דותן, ירושלים תש"ע, עמ' 434-392. <a href="papers/babel notes.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	"קטעי מקרא" (קטלוג), בתוך: דוד רוזנטל, אוסף הגניזה הקהירית בז'נבה: קטלוג ומחקרים, ירושלים תש"ע, עמ' 57-46. </li>
+                    </br>
+                    <li>	"מניין פסוקי המקרא של בן נפתלי", בתוך: דוד רוזנטל, אוסף הגניזה הקהירית בז'נבה: קטלוג ומחקרים, ירושלים תש"ע, עמ' 221-208. <a href="papers/number naftali.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'כתב-יד עתיק של ספרי כתובים בניקוד בבלי', בתוך: רפאל זֵר ויוסף עופר (עורכים), ישראל: מחקרים בלשון לזכרו של ישראל ייבין, ירושלים תשע"א, עמ' 129-154. <a href="papers/babylonian manuscript.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>       "מחידות המסורה הבבלית: "גם במקרא דם במשנה"", לזכרו של ישראל ייבין, ירושלים: האקדמיה הלאומית הישראלית למדעים תשע"ב, עמ' 36-45. <a href="papers/Ofer - Gam Dam.pdf" target="_blank">(PDF)</a></li>
+                    <ol type="a" start="a">
+                        </br>
+                        <li>       "Three Enigmatic Notes from the Babylonian Masorah Comparing the Language of the Hebrew Bible and the Mishnah", The Text of the Hebrew Bible: from the Rabbis to the Masoretes, Journal of Ancient Judaism Supplements 13 (2014), pp. 207-214 </li>
+                    </ol>
+                    </br>
+                    <li>	"הכינויים 'מסורה גדולה' ו'מסורה קטנה'; מבעלי המסורה עד מנחת שי", לשוננו עד (תשע"ב), 279-303. <a href="papers/mesorah big small.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>        "מונח המסורה 'חומשה' – האזכור העתיק ביותר של קובץ 'חמש מגילות'", נטעי אילן: מחקרים בלשון העברית ובאחיותיה מוגשים לאילן אלדר, בעריכת עירית מאיר ומשה בר-אשר, חיפה תשע"ד, עמ' 309­-320. <a href="papers/Humsha.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>        [עם אלכסנדר לובוצקי], "המסורה למקרא כנוהל תיקון שגיאות", תרביץ פב (תשע"ד), עמ' 89­-113. <a href="papers/Ofer-Lubotzky - Masora and Codes.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li dir="ltr">        "Acrostic Signatures in Masoretic Notes", Vetus Testamentum 65 (2015), pp. 230-246.  <a href="papers/Acrostic Signatures in Masoretic Notes - Ofer 2015.pdf" target="_blank">(PDF) </a></li>
+                    </br>
+                    <li dir="ltr">        <strong><i>The Masora on Scripture and Its Methods</i></strong>, Fontes et Subsidia ad Bibliam pertinentes 7, Berlin: De Gruyter 2019, 369 pp.  </a></li>
+                    <li>	'חתימות אקרוסטיכון בהערות המסורה ודרך יצירתן', לשוננו עח (תשע"ו), עמ' 77-60.</li>
+                    <li>	"The Tiberian Tradition of Reading the Bible and the Masoretic System”, in: W. Randall Garr & Steven Fassberg (eds.), A Handbook of Biblical Hebrew, Winona Lake: Eisenbrauns 2016, Vol. 1, Cha. 4, pp .187-202. </li>
+                    <li>
+                        "A Fragment of the Aleppo Codex (Exodus 8) that Reached Israel", Textus 26 (2016), pp. 173-198
+                    </li>
+                    <li>
+                        "טעמי המקרא וכורש המשיח", לשון לציון: דעת לשון ב (תשע"ו), עמ' 155-147.
+                    </li>
+                    <li>
+                        "'בָּרוֹי דיוסף' – שתי הערות מסורה על מילים קמוצות וגלגוליהן", מחקרים בלשון יז-יח: ספר היובל לאהרן ממן, הוצאת האוניברסיטה העברית בירושלים, תשע"ז, עמ' 445-427.
+                    </li>
+                    <li>
+                        "הערת מסורה עתיקה בדפי שטיח בכ"י למ לשמואל בן יעקב", לשוננו פ (תשע"ח), עמ' 52-29.
+                    </li>
+                    <li>
+                        "ספר 'הוריית הקורא' מנקודת המבט של חקר טעמי המקרא', בתוך: אילן אלדר, תורת טעמי המקרא של ספר 'הוריית הקורא' לפי קריאת ארץ ישראל במאה הי"א, ירושלים: ביאליק, תשע"ח, עמ' 49-31.
+                    </li>
+                    <li>
+                        "כיצד נוצרו חילופי בן אשר ובן נפתלי?", לשוננו פא (תשע"ט): ספר היובל לחיים אליעזר כהן, עמ' 69-51.
+                    </li>
+                    <li>
+                        "רשימת חילופים עברית בין בן אשר ובין בן נפתלי בכתב-יד למ", לשוננו פב (תש"ף), עמ' 95-79.
+                    </li>
+                    <li>
+                        “Two dedicatory inscriptions in manuscripts of Scripture and the question of their authenticity”, Journal of Jewish Studies 71,1 (Spring 2020), pp. 53-70
+                    </li>
+                    <li>
+                        "הגייה מיוחדת של האות פ"א בשלוש מילים בספר דניאל", עיוני מקרא ופרשנות יא: מנחות ידידות והוקרה ליעקב כדורי", רמת-גן תש"ף, עמ' 225-215.
+                    </li>
+                    <li>
+                        [עם נריה קליין:] "הערת המסורה על חילופי הטעמים זקף ותביר וגלגוליה", לשוננו פג (תשפ"א), עמ' 345-329.
+                    </li>
+                    <li>
+                        "מקורו של מנהג 'בי"ה שמ"ו' בכתיבת ספרי תורה", Jewish Studies Internet Journal 22 (2022), 17 עמ'.<a href="https://jewish-faculty.biu.ac.il/files/jewish-faculty/shared/JSIJ22/ofer.pdf" target="_blank">
+                            (PDF)
+                        </a>
+                    </li>
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a2">ב. מחקרים בנושא פרשני המקרא</b></br>
+                    </br>
+                    <li>	'פירוש החזקוני לתורה וגלגוליו', מגדים ח (סיוון תשמ"ט), עמ' 83-69. <a href="papers/Ofer-Hizquni.pdf" target="_blank">(PDF)</a></li>
+                    <ol type="a" start="a">
+                        </br>
+                        <li>	'תגובה' [לדבריו של א' ארנד], מגדים טו (מרחשוון תשנ"ב), עמ' 95-94. </li>
+                    </ol>
+                    </br>
+                    <li>	'שינויים וחזרות של רש"י בפירושו לתורה', מגדים כ (תמוז תשנ"ג), עמ' 89-83. <a href="papers/rashi-hazarot.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	' "הכל הגהתי" – על מהדורות פירוש רש"י לפרקי המקדש בספר יחזקאל ולנבואת "שלושת האנשים" ', בתוך: מ' בר-אשר, נ' חכם וי' עופר (עורכים), תשורה לעמוס: אסופת מחקרים בפרשנות המקרא מוגשת לעמוס חכם, אלון שבות תשס"ז, עמ' 60-29.<a href="papers/egati.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'מתי נכתב "דייקות", ספר הדקדוק של רשב"ם?', שנתון לחקר המקרא והמזרח הקדום יז (תשס"ז), עמ'    251-233. <a href="papers/Annual for Biblical and Ancient Near East.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	"הסתייגות סמויה ממדרשים בפירושי רש"י לתורה", עיוני מקרא ופרשנות ח: מנחות ידידות והוקרה לאלעזר טויטו, רמת-גן תשס"ח, עמ' 291-279. <a href="papers/rashi-histaygut.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	"מפות ארץ ישראל בפירוש רש"י לתורה – ומעמדו של כתב-יד לייפציג 1", תרביץ עו (תשס"ז), עמ' 443-435.<a href="papers/maps israel.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li dir="ltr">	"The Two Lists of Addenda to Nahmanides’ Torah Commentary: Who Wrote Them?", Jewish Studies Quarterly 15 (2008), pp. 321-352 <a href="papers/The Two Lists of Addenda to Nahmanides.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li dir="ltr">	"A Diagram of the Open Land of the Levite Cities in Nahmanides' Commentary on the Torah", The Jewish Quarterly Review 99:2 (Spring 2009), pp. 271-283  <a href="papers/A Diagram of the Open Land of the - 2009.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	"מדוע טעה רמב"ן בקריאת הכתובת שעל מטבע השקל?", תרביץ פ (תשע"ב), עמ' 261-264.<a href="papers/ramban mistake.pdf" target="_blank"> (PDF) </a> </li>
+                    </br>
+                    <li>	[עם יהונתן יעקבס:] תוספות רמב"ן לפירושו לתורה שנתחברו בארץ ישראל, בהוצאת האיגוד העולמי למדעי היהדות ורשות המחקר של מכללת הרצוג, ירושלים תשע"ג, 718 עמ'. </li>
+                    </br>
+                    <li>	"פירושי רמב"ן על קבר רחל במהדורות השונות של פירושו לתורה", בתוך: מ' אביעוז, א' עסיס וי' שמש (עורכים), זר רימונים: מחקרים במקרא ובפרשנותו מוקדשם לפרופ' רימון כשר,SBL: International Voices in Biblical Studies, אטלנטה 2013, עמ' 562¬-578.<a href="papers/Ofer-Rachel's Tomb.pdf" target="_blank"> (PDF) </a> </li>
+                    </br>
+                    <li dir="ltr">	[with J. Jacobs:] "Nahmanides' addenda to his Commentary on the Pentateuch in light of Ms Cambridge 525", Journal of Jewish Studies LXV 1 (Spring 2014), pp. 113-128  <a href="papers/Nahmanides-Cambridge-Jacobs-Ofer.pdf" target="_blank">(תקציר)</a></li>
+
+
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a3">ג. מחקרים בענייני העברית החדשה</b></br>
+                    </br>
+                    <li>	'האם ראוי לשנות את שיטת הניקוד?', לשוננו לעם נה (תשס"ה-תשס"ו), עמ' 188-182. <a href="papers/Ofer-PuncuationSystem.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'ראשיתו של המבטא הישראלי', בתוך: א' ממן ש' פסברג וי' ברויאר (עורכים), שערי לשון: מחקרים בלשון העברית, בארמית ובלשונות היהודים מוגשים למשה בר-אשר, ירושלים תשס"ח, כרך ג, עמ' 172-166. <a href="papers/accent.pdf" target="_blank">(PDF)</a></li>
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a4">ד. מחקרים בנושא קריאת התורה וההפטרות</b></br>
+                    </br>
+                    <li>	'חלוקת קריאת התורה במחזור החד-שנתי', עלון שבות 104 (תשרי תשד"מ), עמ' 55-41. <a href="papers/Ofer - One Year Reaing Cycle.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>
+                        'הפטרת שבת הגדול', המעין לו, ג (ניסן תשנ"ו), עמ' 20-16. <a href="papers/Ofer-ShabatHagadol.pdf" target="_blank">(PDF)</a><ol type="a" start="a">
+                            </br>
+                            <li>	נדפס תחילה בדף קשר לתלמידי ישיבת הר-עציון 332, שבת הגדול תשנ"ב, עמ' 6-4.] 	(וראה לעיל, א5, 'סדרי נביאים וכתובים'.) </li>
+                        </ol>
+                        </br>
+                    <li>	'שכיחותן של קביעות השנה ושל ההפטרות', סיני קכא, תשנ"ח, עמ' רי-רכד.<a href="papers/frequency of haftarot.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	" 'בג המלך – פת וילך': על מנהג עתיק של קריאת פרשת השבוע במחזור השנתי", דף שבועי של אוניברסיטת בר-אילן מס' 984, פרשת נצבים וראש השנה תשע"ב, עמ' 1-3. <a href="papers/nitsavim.pdf" target="_blank">(PDF)</a> </li>
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a5">ה. מאמרים תורניים (תנ"ך והלכה) </b></br>
+                    </br>
+                    <li>	'ברכת בורא נפשות', עלון שבות, שנה ט (סיוון תשל"ח), עמ' 55-47. <a href="papers/Ofer - Bore Nefashot.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'מי יתן טהור מטמא', עלון שבות 73 (אדר תשל"ט), עמ' 31-28. <a href="papers/taor.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'שמשון בחייו ובמותו', עלון שבות 76 (אב תשל"ט), עמ' 54-51. <a href="papers/shimshon.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'בין החומות', עלון שבות 84 (חנוכה תשמ"א), עמ' 82-78. <a href="papers/between the walls.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'שלום ירושלים', עלון שבות 88 (אייר תשמ"א), עמ' 21-16. <a href="papers/shelom yerushalaim.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>        'הנחה ותנופה בביכורים', המעין כא, ד (תמוז תשמ"א), עמ' 9-4. <a href="papers/Discount and momentum debut.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'ששה עשר בניסן', עלון שבות 93 (אדר תשמ"ב), עמ' 44-40. <a href="papers/nisan.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'משפטי התנאי בתורה', עלון שבות 98 (אב תשמ"ב), עמ' 35-28. <a href="papers/condition.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li>	'פסח וחגיגה במקום אשר יבחר', המעין כג, ג (ניסן תשמ"ג), עמ' 34-28. <a href="papers/pesah hagiga.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'שיטת הרמב"ם בעוללות', עלון שבות 103 (אב תשמ"ג), עמ' 31-23. <a href="papers/olelot.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'משרש נחש יצא צפע', מגדים א, ניסן תשמ"ו, עמ' 60-56. <a href="http://www.herzog.ac.il/17-2014-02-24-11-47-00/2014-01-06-11-34-45/746-" target="_blank"> קישור לאתר </a></li>
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a6">ו. עריכת ספרים וכתבי עת</b></br>
+                    </br>
+                    <li>	מגדים - ביטאון לענייני מקרא (הוצאת מכללת הרצוג באלון שבות) - עורך (תשמ"ט ואילך) </li>
+                    </br>
+                    <li>	לשוננו לעם / העברית, הוצאת האקדמיה ללשון העברית בירושלים - חבר המערכת (תשנ"א ואילך). </li>
+                    </br>
+                    <li>	זיכרונות האקדמיה ללשון העברית - כרך ל"ה-ל"ז (תשמ"ח-תש"ן; עם יגאל ינאי), ירושלים, תשנ"ב; כרך ל"ח-מ' (תשנ"א-תשנ"ג), ירושלים, תשנ"ה; כרך מ"א-מ"ג (תשנ"ד- תשנ"ו), ירושלים, תשנ"ח. </li>
+                    </br>
+                    <li>	מרדכי ברויאר, פרקי בראשית, הוצאת תבונות, אלון שבות תשנ"ח, 730 עמ'. </li>
+                    </br>
+                    <li>	כתר ירושלים - תנ"ך האוניברסיטה העברית, על פי הנוסח והמסורה של כתר ארם צובה וכתבי-יד הקרובים לו בשיטת הרב מרדכי ברויאר, ירושלים תש"ס, 874 + 34 עמ' - פיקוח מדעי על המהדורה. </li>
+                    </br>
+                    <li>	ד' לייאנס, המסורה המצרפת - דרכיה וסוגיה, על פי כתב-יד קהיר של הנביאים, הוצאת הספרים של אוניברסיטת בן-גוריון בנגב, באר שבע תש"ס, 210 + xii עמ'. </li>
+                    </br>
+                    <li>	י' ייבין, המסורה למקרא, אסופות ומבואות בלשון ג, האקדמיה ללשון העברית, ירושלים תשס"ג, 254 עמ'. </li>
+                    </br>
+                    <li>	'שיטת הבחינות' של הרב מרדכי ברויאר: קובץ מאמרים ותגובות, הוצאת תבונות, אלון שבות תשס"ה, 369 עמ'. </li>
+                    </br>
+                    <li>	[עם: שמואל ורגון, יצחק ש' פנקובר, יעקב קליין], עיוני מקרא ופרשנות ז: מנחות ידידות והוקרה למנחם כהן, הוצאת אוניברסיטת בר-אילן, רמת-גן תשס"ה, 510 + xxvi עמ'. </li>
+                    </br>
+                    <li>	צבי בצר (מהדיר), מנחת שי על התורה לר' ידידיה שלמה רפאל נורצי, ירושלים תשס"ה, 428 עמ'. </li>
+                    </br>
+                    <li>	[עם: משה בר-אשר ונח חכם], תשורה לעמוס: אסופת מחקרים בפרשנות המקרא מוגשת לעמוס חכם, אלון שבות תשס"ז, 581 עמ'. </li>
+                    </br>
+                    <li>	מרדכי ברויאר, פרקי ישעיהו, הוצאת תבונות, אלון שבות תש"ע, 254 עמ'. </li>
+                    </br>
+                    <li>	[עם רפאל זֵר], ישראל: מחקרים בלשון לזכרו של ישראל ייבין, ירושלים תשע"א, כב + 464 + xxii עמ'. </li>
+                </ol></br></br>
+                <ol type="1" start="1">
+                    <b id="a7">ז. הערות ומאמרי ביקורת</b></br>
+                    </br>
+                    <li>	[ביקורת על:] יוסף ניצן ומשה יעקובי, שער למקרא, ירושלים תשמ"ח, מגדים ז, שבט תשמ"ט, עמ' 76-75. <a href="papers/Ofer - Dotan Nitsanim.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'מהדורה חדשה של "מקראות גדולות"' (ביקורת על: מנחם כהן [מהדיר ועורך מדעי], מקראות גדולות הכתר - מהדורת יסוד חדשה, הוצאת אוניברסיטת בר-אילן, תשנ"ב), תרביץ סא (תשנ"ב), עמ' 171-163. <a href="papers/Ofer - MG HaKeter.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'המסורה הבבלית לתורה בעיבוד טברני של שמואל בן יעקב' (ביקורת), לשוננו נו (תשנ"ב), עמ' 283-269. <a href="papers/Ofer - Breuer LM.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	'פירוש הרלב"ג לתורה במהדורה חדשה' (ביקורת), מגדים כא (טבת תשנ"ד), עמ' 126-124.<a href="papers/ralbag.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	''מאיופס', 'מה-יפית' ו'יום זה מכובד'', תרביץ סג (תשנ"ד), עמ' 597. <a href="papers/Ofer-Mayufes.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'סודן של צורות ההפסק'  (ביקורת על ספרו של ישראל בן-דוד 'צורות הקשר וצורות הפסק בעברית שבמקרא'), תרביץ סח (תשנ"ט), עמ' 447-437. <a href="papers/Hefsek.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'המסורה המצרפת ומלאכת המילים' (ביקורת על ספרו של אהרן דותן 'ניצנים ראשונים בתורת המילים'), לשוננו סז (תשס"ה), עמ' 413-399. <a href="papers/nitsanim.pdf" target="_blank"> (PDF) </a></li>
+                    </br>
+                    <li>	"הכרעת נוסח המקרא על פי המסורה - שיטתו של הרב ברויאר ומקורותיה", Jewish Studies Internet Journal 7, 2008, עמ' 161-147 <a href="http://www.biu.ac.il/JS/JSIJ/7-2008/Ofer.pdf" target="_blank"> (PDF) </a>  </li>
+                </ol></br></br>
+
+                <ol type="1" start="1">
+                    <b id="a8">ח. ערכים אינציקלופדיים</b></br>
+                    </br>
+                    <li dir="ltr">	'Ben Asher, Aaron ben Moses', Encyclopedia of the Bible and Its Reception, Berlin & Boston: De Gruyter, Vol 3, 2012, cols. 826-829 </li>
+                    </br>
+                    <li dir="ltr">	'Ben Naphtali, Moses ben David', Encyclopedia of the Bible and Its Reception, Vol 3, 2012, cols. 875-876. </li>
+                    </br>
+                    <li dir="ltr">	'Cairo Codex', Encyclopedia of the Bible and Its Reception, Vol 4, 2012, cols. 769-770. </li>
+                    </br>
+                    <li dir="ltr">	'The Five scrolls', Encyclopedia of the Bible and Its Reception, [in press] </li>
+                    </br>
+                    <li dir="ltr">	“Aleppo Codex”, Encyclopedia of Hebrew Language and Linguistics (General Editor: Geoffrey Khan), Leiden & Boston 2013, vol. 1, pp. 84-85 </li>
+                    </br>
+                    <li dir="ltr">	"'Aṯe Meraḥiq", Encyclopedia of Hebrew Language and Linguistics, vol. 1, p. 231 </li>
+                    </br>
+                    <li dir="ltr"> "Deḥiq", Encyclopedia of Hebrew Language and Linguistics, vol. 1, pp. 690-691 </li>
+                    </br>
+                    <li dir="ltr">	"Mappiq", Encyclopedia of Hebrew Language and Linguistics, vol. 2, p. 577 </li>
+                    </br>
+                    <li dir="ltr"> "Masora, Babylonian", Encyclopedia of Hebrew Language and Linguistics, vol. 2, pp. 585-588 </li>
+                    </br>
+                    <li dir="ltr">	“St. Petersburg I Firkovitch B19a Manuscript of the Hebrew Bible ", vol. 3, pp. 617-618 </li>
+                </ol></br></br>
+
+                <ol type="1" start="1">
+                    <b id="a9">ט. התקבלו לפרסום</b></br>
+                    </br>
+                    <li dir="ltr">"Three Enigmatic Notes from the Babylonian Masorah Comparing the Language of Scripture and the Mishnah", The Text of the Hebrew Bible from the Rabbis to the Masoretes, The Supplements to the Journal of Ancient Judaism, Madrid (in press)</li>
+                    </br>
+                    <li dir="ltr">"A Fragment of the Aleppo Codex (Exodus 8) that Reached Israel", Textus (in press)</li>
+                </ol></br></br>
+
+                <ol type="1" start="1">
+                    <b id="a10"> י. מאמרים פופולריים </b></br>
+                    </br>
+                    <li>	'עיונים אחדים בכתר', בתוך: א' שמוש, הכתר - סיפורו של כתר ארם צובה, ירושלים תשמ"ז, עמ' 139-127. </li>
+                    </br>
+                    <li>
+                        'כתרי התורה', העלון השבועי (בהוצאת האקדמיה ללשון העברית), עלון כד (אייר התש"ן) - 8 עמ'. <ol type="a" start="a">
+                            </br>
+                            <li>	נדפס שוב בתוך: לשוננו לעם מ-מא, קובץ לשנת הלשון, עמ' 111-105.] </li>
+                        </ol>
+                        </br>
+                    <li>	'כיצד מצטטים מן התנ"ך', לשוננו לעם מב (תשנ"א), עמ' 57-61. <a href="http://hebrew-academy.huji.ac.il/sifriyya/ReadingHall/Documents/YOBQ.pdf" target="_blank"> קישור לאתר </a></li>
+                    </br>
+                    <li>
+                        [עם יגאל ינאי]: 'וסימנך - סימנים בלשון העברית', לשוננו לעם מב (תשנ"א), עמ' 142-145.   <a href="papers/simanim.pdf" target="_blank">(PDF)</a><ol type="a" start="a">
+                            </br>
+                            <li>	נדפס שוב, בנוסח שונה: 'סימני זיכרון בעברית', דף קשר בישיבת הר-עציון 308, מרחשוון תשנ"ב.] </li>
+                        </ol>
+                        </br>
+                    <li>	רשימות בלשוננו לעם החתומות י"ע: מחידושי מלחמת המפרץ [מב, 188-187], התעתיק מערבית [מג, 76-74], פריימריז כחול-לבן [מג, 112-111], קטעי דיונים [מג, 194-183 (לקט)], כללי כתיב חד-משמעיים [מג, 197-195], צירי או סגול [מד, 43-42]. </li>
+                    </br>
+                    <li>	'כתר ארם צובה', י' אלפסי (עורך), חג השבועות, בהוצאת עיריית בת-ים הענף לתרבות תורנית, סיוון ה'תשנ"ב, עמ' 29-26. </li>
+                    </br>
+                    <li>	'טעמי המקרא - סימני פיסוק או סימני נגינה?', מחניים 3, כסלו תשנ"ג, עמ' 75-70. <a href="papers/pisuk ungina.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'הטעם העליון והתחתון בעשרת הדיברות', י' אלפסי (עורך), עצרת - פרקים לחג השבועות, בהוצאת עיריית בת-ים הענף לתרבות תורנית, סיוון ה'תשנ"ג, עמ' 19-17. </li>
+                    <ol type="a" start="a">
+                        </br>
+                        <li>	נדפס שוב בשינויים: 'הטעם העליון והטעם התחתון בעשרת הדיברות', הדף השבועי של אוניברסיטת בר-אילן מס' 238, פרשת במדבר וחג השבועות תשנ"ח, עמ' 6-4] <a href="http://www.biu.ac.il/jh/parasha/shavuot/ofe.html" target="_blank"> קישור לאתר </a></li>
+                    </ol>
+                    </br>
+                    <li>	'בין טעמי המקרא לסימני הפיסוק', לשוננו לעם מד (תשנ"ג), עמ'  192-187. <a href="papers/teamim ufisuk.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'ספרות המסורה של דורנו', המעין לה, א (תשרי תשנ"ה), עמ' 14-9. <a href="http://daat.ac.il/daat/kitveyet/hamaayan/safrut-2.htm" target="_blank"> קישור לאתר </a></li>
+                    </br>
+                    <li>	'פרשת "השכם בבקר" - מנהג עתיק של קריאה בתורה', הדף השבועי של אוניברסיטת בר-אילן מס' 271, פרשת וארא תשנ"ט, עמ' 4-3. <a href="http://www.biu.ac.il/JH/Parasha/vaera/ofe.html" target="_blank"> קישור לאתר </a></li>
+                    </br>
+                    <li>
+                        '"נקבה תסובב גבר" - על סימני זיכרון לקריאה בתורה', הדף השבועי של אוניברסיטת בר-אילן מס' 338, פרשת אחרי מות תש"ס, עמ' 3-1.<a href="http://www.biu.ac.il/JH/Parasha/acharey/ofe.html" target="_blank"> קישור לאתר </a> <ol type="a" start="a">
+                            </br>
+                            <li>	גרסה אנגלית של המאמר, באתר הדף השבועי באנגלית: "A Woman Courts a Man" - Mnemonic Devices for Torah Reading,   <a href="http://www.biu.ac.il/JH/Parasha/eng/aharey/ofe.html" target="_blank"> קישור לאתר </a>   </li>
+                        </ol>
+                        </br>
+                    <li>	'כתר הכתרים", עת-מול - עתון לתולדות ארץ ישראל ועם ישראל, כ"ו 4 (156), אייר תשס"א, עמ' 7-4 [עיבוד של פריט 2 לעיל]. </li>
+                    </br>
+                    <li>	"מבוא חדש-ישן למסורה" [סקירה של הספר: י' ייבין, המסורה למקרא, ירושלים תשס"ג], אקדם 24 (אלול תשס"ג), עמ'  7-6. <a href="papers/aqadem24.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	'עוד על הכתובת בציורו של למר' (תגובה למאמרו של גב"ע צרפתי), לשוננו לעם נג (תשס"ב), עמ' 159. <a href="papers/Lemaire.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	' "הנסתרֹת לה' א-להינו" והמילים בתורה שנקוד עליהן', הדף השבועי של אוניברסיטת בר-אילן מס' 670, פרשת נצבים-וילך תשס"ו, עמ' 3-1. <a href="papers/MILIM NEQUDOT.pdf" target="_blank">(PDF)</a> </li>
+                    </br>
+                    <li dir="ltr">	'The Shattered Crown: The Aleppo Codex 60 Years After the Riots', Biblical Archaeology Review 34,5 (2008), pp. 38-49. </li>
+                    </br>
+                    <li>	"כתר ארם צובה", בתוך: ירון הראל (עורך), קהילות ישראל במזרח במאות התשע-עשרה והעשרים: סוריה, ירושלים תשס"ט, עמ' 123-122. </li>
+                    </br>
+                    <li>	"'אם ידברו הבנים ספרדית, לא יבין איש שפת בנו ובתו'! - המאבק על מבטא העברית המתחדשת בארץ ישראל", עת-מול – עיתון לתולדות ארץ ישראל ועם ישראל, 214, טבת תשע"א, עמ' 12-9. <a href="https://www.ybz.org.il/_Uploads/dbsAttachedFiles/etmol_214_ofer.pdf" target="_blank"> קישור לאתר </a></li>
+                    </br>
+                    <li>             מה היה חלקם של ישראל במרד של קֹרח? עיון בפירושי רמב"ן ורבנו חננאל", דף שבועי של אוניברסיטת בר אילן מס' 1020, פרשת קרח תשע"ג עמ' 1-2<a href="http://www.biu.ac.il/jh/parasha/Korach/Ofer.pdf" target="_blank"> קישור לאתר </a> <a href="papers/Ofer-Korach-Bar-Ilan.pdf" target="_blank"> (PDF)</a></li>
+                    </br>
+                    <li>             "הנחה ותנופה בביכורים", דף שבועי אוניברסיטת בר אילן מס' 1085, פרשת כי תבוא תשע"ד, עמ' 1­-3. [עיבוד של ו 6 לעיל].</li>
+                    </br>
+                    <li dir="ltr">      'The Mystery of the Missing Pages of the Aleppo Codex', Biblical Archaeology Review 41,4  (July-August 2015), pp. 58-62, 70</li>
+                    </br>
+                    <li>             "הקמת היישוב כרמי צור", עין לעציון: יישובים דמויות ואירועים בגוש עציון, בעריכת מרדכי נאור וצבי צמרת, ישראל 2016, עמ' 180-170.<a href="papers/Ofer-Karme_Zur.pdf" target="_blank"> (PDF)</a></li>
+
+
+                </ol></br></br>
+                <ol type="10" start="1">
+                    <b id="a11">יא. רשימות זיכרון</b></br>
+                    </br>
+                    <li>	"הרב מרדכי ברויאר ז"ל", מעט מן האור, פרשת תצוה, י"ב באדר תשס"ז. <a href="papers/MeatMinAor.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	"הרב מרדכי ברויאר – מכריע נוסח המקרא", מקור ראשון, כ"ו באדר תשס"ז. <a href="papers/Ofer-Breuer.pdf" target="_blank">(PDF)</a></li>
+                    </br>
+                    <li>	"הרב מרדכי ברויאר ז"ל – אוהב התורה, העם והארץ", המעיין, תמוז תשס"ז. <a href="papers/rabbi m breuer.pdf" target="_blank">(PDF)</a></li>
+                </ol></br></br>
+
+
+
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <script src="Script.js"></script>
+        <p>&copy; 2023 Prof. Yosef Ofer</p>
+    </footer>
+</body>
+</html>
